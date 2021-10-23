@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Project = styled.div`
 
@@ -17,4 +17,4 @@ export const Project = styled.div`
 
   margin: 2.4rem;
 
-`
+`;

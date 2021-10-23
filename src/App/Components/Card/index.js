@@ -36,7 +36,7 @@ export default function Card({
           <Techs reverse={(id % 2)}>
             {languages.map((item) => (
               <Language
-                key={Math.random()}
+                key={Math.random().toFixed(3)}
                 language={item}
               >
                 {item}
@@ -48,6 +48,7 @@ export default function Card({
         <div className="mockup">
           <Image
             src={mockup}
+            alt={`Mockup do ${title}`}
             width={458}
             height={242}
           />
