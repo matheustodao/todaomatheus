@@ -16,7 +16,7 @@ export default function ModalHeader({ title, modalName, children }) {
   return (
     <Container>
       <button type="button" onClick={closeModal}>
-        <Image src="/icons/arrow-back.svg" width={20} height={20} />
+        <Image src="/icons/arrow-back.svg" width={20} height={20} alt="voltar" />
       </button>
 
       <h1>{title}</h1>

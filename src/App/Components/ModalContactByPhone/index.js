@@ -26,6 +26,7 @@ export default function ModalContactByPhone() {
             <Button bg="whatsapp" href={whatsapp}>
               <Image
                 src="/icons/whatsapp-white@18.svg"
+                alt="Icone whatsapp"
                 width={18}
                 height={18}
               />
@@ -35,6 +36,7 @@ export default function ModalContactByPhone() {
             <Button bg="telegram" href={telegram}>
               <Image
                 src="/icons/telegram.svg"
+                alt="Icone telegram"
                 width={18}
                 height={18}
               />
@@ -46,6 +48,7 @@ export default function ModalContactByPhone() {
             <Button href={phone}>
               <Image
                 src="/icons/brazil.svg"
+                alt="Brasil"
                 width={18}
                 height={18}
               />

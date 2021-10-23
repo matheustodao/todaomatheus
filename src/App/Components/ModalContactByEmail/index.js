@@ -105,7 +105,7 @@ export default function ModalContactByEmail() {
           <Loader isLoading={isLoading} />
           <ModalHeader title="Compose" modalName="byEmail">
             <Button type="submit" disabled={isDisabled}>
-              <Image src="/icons/send.svg" width={20} height={20} />
+              <Image src="/icons/send.svg" alt="enviar" width={20} height={20} />
             </Button>
           </ModalHeader>
           <main>
