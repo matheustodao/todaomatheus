@@ -50,55 +50,57 @@ export default function AboutMe() {
             <h3>ReactJS | Javascript | NodeJS</h3>
           </div>
         </Apresentation>
+        <div className="wrapper-more-information">
 
-        <Contact className="contact">
-          <Button type="button" onClick={() => handleOpenModalByPhone()}>
-            <Image
-              src="/icons/whatsapp.svg"
-              alt="Logo do Whatsapp"
-              width={16}
-              height={16}
-            />
-            <span>
-              Diga um Olá!
-            </span>
-          </Button>
-        </Contact>
-
-        <SocialMedias>
-          <Link href="https://linkedin.com/in/matheustodao">
-            <a>
+          <Contact className="contact">
+            <Button type="button" onClick={() => handleOpenModalByPhone()}>
               <Image
-                src="/icons/linkedin.svg"
-                alt="Meu Linkedin"
-                width={20}
-                height={20}
+                src="/icons/whatsapp.svg"
+                alt="Logo do Whatsapp"
+                width={16}
+                height={16}
               />
-            </a>
-          </Link>
+              <span>
+                Diga um Olá!
+              </span>
+            </Button>
+          </Contact>
 
-          <Link href="https://github.com/matheustodao">
-            <a>
-              <Image
-                src="/icons/github.svg"
-                alt="Meu github"
-                width={20}
-                height={20}
-              />
-            </a>
-          </Link>
+          <SocialMedias>
+            <Link href="https://linkedin.com/in/matheustodao">
+              <a>
+                <Image
+                  src="/icons/linkedin.svg"
+                  alt="Meu Linkedin"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            </Link>
 
-          <Link href="https://instagram.com/matheustodao">
-            <a>
-              <Image
-                src="/icons/instagram.svg"
-                alt="Meu instagram"
-                width={20}
-                height={20}
-              />
-            </a>
-          </Link>
-        </SocialMedias>
+            <Link href="https://github.com/matheustodao">
+              <a>
+                <Image
+                  src="/icons/github.svg"
+                  alt="Meu github"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            </Link>
+
+            <Link href="https://instagram.com/matheustodao">
+              <a>
+                <Image
+                  src="/icons/instagram.svg"
+                  alt="Meu instagram"
+                  width={20}
+                  height={20}
+                />
+              </a>
+            </Link>
+          </SocialMedias>
+        </div>
       </Container>
     </>
   );

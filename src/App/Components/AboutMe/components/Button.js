@@ -17,10 +17,9 @@ export const Button = styled.button`
 
   span {
     margin-left: .8rem;
-    font-weight: 400;
-
+    font-weight: 600;
   }
   &:active {
     filter: brightness(.95);
   }
-`
+`;

@@ -13,4 +13,13 @@ export const Container = styled.div`
   padding: 0 1.8rem;
   padding-bottom: 1.6rem;
   background: #FFFFFF;
+
+  .wrapper-more-information {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container as container} from './components/Container';
+import { Container as container } from './components/Container';
 import { Apresentation as apresentation } from './components/Apresentation';
 import { Contact as contact } from './components/Contact';
 import { SocialMedias as socialMedias } from './components/SocialMedias';
@@ -46,13 +46,15 @@ export const Apresentation = styled(apresentation)`
     }
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 424px) {
     .wrapper-photo {
       box-shadow: none;
-      margin-top: 0;
+      margin-top: -2rem;
+      width: 15.6rem;
     }
 
     .me {
+      width: 100%;
       margin-top: 5%;
     }
   }
@@ -89,8 +91,10 @@ export const Contact = styled(contact)`
 `;
 
 export const SocialMedias = styled(socialMedias)`
-  @media (min-width: 1200px) and (max-width: 100vw) {
-    /* margin-bottom: 1.6rem; */
+  @media (max-width: 644px) {
+    a + a {
+      margin-left: 2.4rem;
+    }
   }
 `;
 
