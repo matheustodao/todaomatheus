@@ -13,21 +13,13 @@ import {
   SocialMedias,
 } from './styles';
 
-import ModalContactByEmail from '../ModalContactByEmail';
 import ModalContactByPhone from '../ModalContactByPhone';
 
 export default function AboutMe() {
   const { setModal } = useContext(ModalContext);
-  const [openModalByEmail, setOpenModalByEmail] = useState(false);
   const [openModalByPhone, setOpenModalByPhone] = useState(false);
 
   useEffect(() => {
-    setModal({
-      modalName: 'byEmail',
-      setCloseModal: (bool) => setOpenModalByEmail(bool),
-      isOpen: openModalByEmail,
-    });
-
     setModal({
       modalName: 'byPhone',
       setCloseModal: (bool) => setOpenModalByPhone(bool),
@@ -35,17 +27,12 @@ export default function AboutMe() {
     });
   });
 
-  function handleOpenModalByEmail() {
-    setOpenModalByEmail(true);
-  }
-
   function handleOpenModalByPhone() {
     setOpenModalByPhone(true);
   }
 
   return (
     <>
-      { openModalByEmail && <ModalContactByEmail /> }
       { openModalByPhone && <ModalContactByPhone /> }
       <Container>
         <Apresentation>
@@ -65,9 +52,6 @@ export default function AboutMe() {
         </Apresentation>
 
         <Contact className="contact">
-          <Button type="button" onClick={() => handleOpenModalByEmail()}>
-            Me manda um e-mail
-          </Button>
           <Button type="button" onClick={() => handleOpenModalByPhone()}>
             <Image
               src="/icons/whatsapp.svg"
