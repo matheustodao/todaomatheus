@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import styled, { keyframes } from 'styled-components';
 
 const load = keyframes`
