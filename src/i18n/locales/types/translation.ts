@@ -55,10 +55,15 @@ type TMenuNavigation = [
   },
 ];
 
+type TLanguages = {
+  portuguese: string,
+  english: string,
+}
+
 export interface ITranslation {
   title: string,
   description: string,
   pages: TPages,
   menuNavigation: TMenuNavigation,
-  languages: Array<string>,
+  languages: TLanguages,
 }
