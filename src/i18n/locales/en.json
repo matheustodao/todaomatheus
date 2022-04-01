@@ -1,0 +1,85 @@
+{
+  "title": "Matheus Todao - React Frontend Developer",
+  "description": "Hi! I'm Matheus Todao, a ReactJS frontend developer. I love coding and programming. I have studied javascript since 2019, but my interest in programming since 2017. I know NextJS, Typescript, a little of NodeJS, and more. Look at my website to discover more about me.",
+
+  "pages": {
+    "textButton": {
+      "MoreAboutMe": "More About Me",
+      "LetIsTalk": "Let's Talk",
+      "SeeAllprojects": "See all projects"
+    },
+
+    "home": {
+      "greeting": "Hello, what's up?",
+      "title": "I'm Matheus Todao ",
+      "subtitle": "Frontend Developer",
+      "introduce": "And I love programming/coding! <strong>Do you want to know a something funny?</strong> \n I discovered the programming world when I was 12 years old (it was in november or december of 2017). I wanted to know how I could build an Android game without studying programming...",
+
+      "sections": {
+        "mySkills": {
+          "name": "My Skills"
+        },
+
+        "skillsOfMyInteresting": {
+          "name": "Skills of my interesting"
+        },
+
+        "hobbies": {
+          "name": "Hobbies",
+          "first": "Designing UI",
+          "second": "Study about finances",
+          "third": "Read books",
+          "fourth": "Watching documentaries",
+          "fiveth": "And many more"
+        },
+
+        "whatIveMadeUp": {
+          "name": "What I've made up"
+        },
+
+        "thatIsIt": {
+          "name": "That's it!",
+          "description": "But if you want to know how was the process to build this portfolio.",
+          "CTAClick": "Click here",
+          "linkText": "How I built my portfolio."
+        }
+
+      }
+    },
+
+    "aboutMe": {
+      "title": "Who is Matheus Todao?",
+      "subtitle": "Frontend Developer",
+      "description": "And I love programming/coding! Do you want to know something funny? \n I discovered the programming world when I was 12 years old (it was in November or December of 2017). I wanted to know how I could build an Android game without studying programming... \n In begin 2018 I started to study programming, first I studied the logical flow of code with visualg, like pascal but in Portuguese; some months later I got my first steps to learning a language programming, it was our little Python snake. \n Oh! I almost forgot I tried to learn Java, but... \n In 2019 I found my programming language 😂 and I did not stop learning. It's Javascript ❤️! A thing that motivate me, to learn, was Omnistack of Rocketseat (7 days of coding an application) I loved (and I'm still loving) was the javascript stack: ReactJS, React Native, and NodeJS. When I saw the power to give us, the possibility to write code in front and backend using the same language! And same year I started to search How I can learn javascript and saw I had to study HTML and CSS, I tagged along. \n Even I studying so much Javascript and React I can't feel my growth, so I'm got at the end of 2020 great investment I join as a student, of course, <a target='_blank' href='https://jstack.com.br'>JStack'</a>,for me, I made the right choice, because I can see what it was left to my growing up and I have learning so much with the course and professor on his Instagram."
+    },
+
+    "contact": {
+      "name": "Reach me out"
+    }
+  },
+
+  "menuNavigation": [
+    {
+      "id": 1,
+      "name": "Home",
+      "link": "/"
+    },
+
+    {
+      "id": 2,
+      "name": "Contact",
+      "link": "/contact"
+    },
+
+    {
+      "id": 3,
+      "name": "Contact",
+      "link": "/blogs/how-i-built-my-portfolio"
+    }
+  ],
+
+  "languages": [
+    "Portuguese",
+    "English"
+  ]
+}
