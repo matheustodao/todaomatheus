@@ -78,8 +78,8 @@
     }
   ],
 
-  "languages": [
-    "Português",
-    "Inglês"
-  ]
+  "languages": {
+    "portuguese": "Português",
+    "english": "Inglês"
+  }
 }
