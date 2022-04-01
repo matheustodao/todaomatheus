@@ -17,7 +17,7 @@
 
       "sections": {
         "mySkills": {
-          "name": "My Skills"
+          "name": "My skills"
         },
 
         "skillsOfMyInteresting": {
@@ -30,7 +30,7 @@
           "second": "Study about finances",
           "third": "Read books",
           "fourth": "Watching documentaries",
-          "fiveth": "And many more"
+          "fiveth": "And a lot of more"
         },
 
         "whatIveMadeUp": {
@@ -50,7 +50,7 @@
     "aboutMe": {
       "title": "Who is Matheus Todao?",
       "subtitle": "Frontend Developer",
-      "description": "And I love programming/coding! Do you want to know something funny? \n I discovered the programming world when I was 12 years old (it was in November or December of 2017). I wanted to know how I could build an Android game without studying programming... \n In begin 2018 I started to study programming, first I studied the logical flow of code with visualg, like pascal but in Portuguese; some months later I got my first steps to learning a language programming, it was our little Python snake. \n Oh! I almost forgot I tried to learn Java, but... \n In 2019 I found my programming language 😂 and I did not stop learning. It's Javascript ❤️! A thing that motivate me, to learn, was Omnistack of Rocketseat (7 days of coding an application) I loved (and I'm still loving) was the javascript stack: ReactJS, React Native, and NodeJS. When I saw the power to give us, the possibility to write code in front and backend using the same language! And same year I started to search How I can learn javascript and saw I had to study HTML and CSS, I tagged along. \n Even I studying so much Javascript and React I can't feel my growth, so I'm got at the end of 2020 great investment I join as a student, of course, <a target='_blank' href='https://jstack.com.br'>JStack'</a>,for me, I made the right choice, because I can see what it was left to my growing up and I have learning so much with the course and professor on his Instagram."
+      "description": "And I love programming/coding! <strong>Do you want to know something funny?</strong> \n I discovered the programming world when I was 12 years old (it was in November or December of 2017). I wanted to know how I could build an Android game without studying programming... \n In begin 2018 I started to study programming, first I studied the logical flow of code with visualg, like pascal but in Portuguese; some months later I got my first steps to learning a language programming, it was our little Python snake. \n Oh! I almost forgot I tried to learn Java, but... \n In 2019 I found my programming language 😂 and I did not stop learning. It's Javascript ❤️! A thing that motivate me, to learn, was Omnistack of Rocketseat (7 days of coding an application) I loved (and I'm still loving) was the javascript stack: ReactJS, React Native, and NodeJS. When I saw the power to give us, the possibility to write code in front and backend using the same language! And same year I started to search How I can learn javascript and saw I had to study HTML and CSS, I tagged along. \n Even I studying so much Javascript and React I can't feel my growth, so I'm got at the end of 2020 great investment I join as a student, of course, <a target='_blank' href='https://jstack.com.br'>JStack'</a>,for me, I made the right choice, because I can see what it was left to my growing up and I have learning so much with the course and professor on his Instagram."
     },
 
     "contact": {
@@ -73,13 +73,13 @@
 
     {
       "id": 3,
-      "name": "Contact",
-      "link": "/blogs/how-i-built-my-portfolio"
+      "name": "How I built my portfolio",
+      "link": "/blog/posts/how-i-built-my-portfolio"
     }
   ],
 
-  "languages": [
-    "Portuguese",
-    "English"
-  ]
+  "languages": {
+    "portuguese": "Portuguese",
+    "english": "English"
+  }
 }
