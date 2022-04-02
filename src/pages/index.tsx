@@ -1,12 +1,20 @@
-import { useTranslation } from 'react-i18next';
 import { Main } from '../styles';
-import translateToHTML from '../utils/translateToHTML';
+import useTranslate from '../hooks/useTranslate';
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { translationHTLMParse, i18n } = useTranslate();
+  function handleChangeLanguage() {
+    const currentLanguage = i18n.language;
+    return currentLanguage === 'en' ? i18n.changeLanguage('pt') : i18n.changeLanguage('en');
+  }
   return (
     <Main>
-      {translateToHTML(t('pages.aboutMe.description'), true)}
+      {translationHTLMParse('pages.aboutMe.description')}
+      <button type="button" onClick={handleChangeLanguage}>
+        Mudar para
+        {' '}
+        {i18n.language === 'en' ? 'pt' : 'en'}
+      </button>
     </Main>
   );
 }
