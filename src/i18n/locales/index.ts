@@ -13,7 +13,7 @@ export const resources: IResources = {
     translation: enLanguage,
   },
 
-  ptBR: {
+  pt: {
     translation: ptBRLanguage,
   },
 };
