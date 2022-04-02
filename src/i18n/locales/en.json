@@ -58,25 +58,19 @@
     }
   },
 
-  "menuNavigation": [
-    {
-      "id": 1,
-      "name": "Home",
-      "link": "/"
+  "menuNavigation": {
+    "home": {
+      "name": "Home"
     },
 
-    {
-      "id": 2,
-      "name": "Contact",
-      "link": "/contact"
+    "contact": {
+      "name": "Contact"
     },
 
-    {
-      "id": 3,
-      "name": "How I built my portfolio",
-      "link": "/blog/posts/how-i-built-my-portfolio"
+    "howIBuiltMyPortfolio": {
+      "name": "How I built my portfolio"
     }
-  ],
+  },
 
   "languages": {
     "portuguese": "Portuguese",

@@ -58,25 +58,19 @@
     }
   },
 
-  "menuNavigation": [
-    {
-      "id": 1,
-      "name": "Home",
-      "link": "/"
+  "menuNavigation": {
+    "home": {
+      "name": "Home"
     },
 
-    {
-      "id": 2,
-      "name": "Contato",
-      "link": "/contato"
+    "contact": {
+      "name": "Entre em contato"
     },
 
-    {
-      "id": 3,
-      "name": "Como eu montei o meu portfolio.",
-      "link": "/blog/posts/como-eu-montei-o-meu-portfolio"
+    "howIBuiltMyPortfolio": {
+      "name": "Como eu montei o meu portfolio."
     }
-  ],
+  },
 
   "languages": {
     "portuguese": "Português",

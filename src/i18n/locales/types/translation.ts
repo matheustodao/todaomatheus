@@ -47,11 +47,14 @@ type TPages = {
   contact: TPage
 }
 
-type TMenuNavigation = {
-  id: number,
+type TMenuOptionNavigation = {
   name: string,
-  link: string,
-};
+}
+type TMenuNavigation = {
+  home: TMenuOptionNavigation,
+  contact: TMenuOptionNavigation,
+  howIBuiltMyPortfolio: TMenuOptionNavigation,
+}
 
 type TLanguages = {
   portuguese: string,
@@ -62,6 +65,6 @@ export interface ITranslation {
   title: string,
   description: string,
   pages: TPages,
-  menuNavigation: TMenuNavigation[],
+  menuNavigation: TMenuNavigation,
   languages: TLanguages,
 }
