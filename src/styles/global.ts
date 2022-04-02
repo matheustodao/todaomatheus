@@ -11,18 +11,23 @@ export default createGlobalStyle`
     outline: none;
 
     box-sizing: border-box;
+    font-family: ${({ theme }) => theme.fonts.inter};
   }
 
   body {
-    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    background: #EFEFEF;
+    background: ${({ theme }) => theme.colors.primary.main};
+    color: ${({ theme }) => theme.colors.text.main};
     height: 100vh;
   }
 
-  input, textarea {
-    font-family: 'Roboto', sans-serif;
+  button {
+    font-family: ${({ theme }) => theme.fonts.poppins};
+    font-weight: 700;
   }
 
+  a {
+    color: ${({ theme }) => theme.colors.text[800]}
+  }
 `;

@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { AppProps } from 'next/app';
 
@@ -6,6 +7,7 @@ import '../i18n';
 import Head from 'next/head';
 
 import GlobalStyle from '../styles/global';
+import { theme } from '../styles/themes';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { t } = useTranslation();
@@ -23,8 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="google-site-verification" content="8UzdDI7o5Ekc81ZlXinATnvEJznzCDc7tR2HktWtdYE" />
         <title>{t('title')}</title>
       </Head>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme.dark}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
