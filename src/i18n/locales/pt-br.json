@@ -4,9 +4,9 @@
 
   "pages": {
     "textButton": {
-      "MoreAboutMe": "Mais Sobre Eu",
-      "LetIsTalk": "Diga um Oi",
-      "SeeAllprojects": "Todos os Projetos"
+      "moreAboutMe": "Mais Sobre Eu",
+      "letIsTalk": "Diga um Oi",
+      "seeAllprojects": "Todos os Projetos"
     },
 
     "home": {

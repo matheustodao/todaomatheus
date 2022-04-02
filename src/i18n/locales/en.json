@@ -4,9 +4,9 @@
 
   "pages": {
     "textButton": {
-      "MoreAboutMe": "More About Me",
-      "LetIsTalk": "Let's Talk",
-      "SeeAllprojects": "See all projects"
+      "moreAboutMe": "More About Me",
+      "letIsTalk": "Let's Talk",
+      "seeAllprojects": "See all projects"
     },
 
     "home": {
@@ -54,7 +54,7 @@
     },
 
     "contact": {
-      "name": "Reach me out"
+      "title": "Reach me out"
     }
   },
 

@@ -9,7 +9,7 @@ type THome = TPage & {
   sections: {
     mySkills: TSection,
 
-    SkillsOfMyInteresting: TSection,
+    skillsOfMyInteresting: TSection,
 
     hobbies: TSection & {
       first: string,
@@ -18,6 +18,8 @@ type THome = TPage & {
       fourth: string,
       fiveth: string,
     },
+
+    whatIveMadeUp: TSection,
 
     thatIsIt: TSection & {
       description: string,
@@ -28,32 +30,28 @@ type THome = TPage & {
 }
 
 type TTextButton = {
-  MoreAboutMe: string,
-  LetIsTalk: string,
-  SeeAllprojects: string,
+  moreAboutMe: string,
+  letIsTalk: string,
+  seeAllprojects: string,
 }
 
 type TPages = {
-  pages: {
-    textButton: TTextButton,
+  textButton: TTextButton,
 
-    home: THome,
+  home: THome,
 
-    aboutMe: TPage & {
-      description: string
-    },
+  aboutMe: TPage & {
+    description: string
+  },
 
-    contact: TPage
-  }
+  contact: TPage
 }
 
-type TMenuNavigation = [
-  {
-    id: number,
-    name: string,
-    link: string,
-  },
-];
+type TMenuNavigation = {
+  id: number,
+  name: string,
+  link: string,
+};
 
 type TLanguages = {
   portuguese: string,
@@ -64,6 +62,6 @@ export interface ITranslation {
   title: string,
   description: string,
   pages: TPages,
-  menuNavigation: TMenuNavigation,
+  menuNavigation: TMenuNavigation[],
   languages: TLanguages,
 }
