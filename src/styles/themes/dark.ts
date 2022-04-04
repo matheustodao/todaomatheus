@@ -1,6 +1,9 @@
 import { DefaultTheme } from 'styled-components';
+import { common as commonStyle } from './common';
 
 export const dark: DefaultTheme = {
+  ...commonStyle,
+
   colors: {
     primary: {
       dark: 'none',

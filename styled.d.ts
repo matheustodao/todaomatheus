@@ -22,15 +22,20 @@ interface IPalette {
   },
 }
 
-interface TFonts {
+interface IFonts {
   inter: string,
   outfit: string,
   poppins: string,
 }
 
+interface ISpacing {
+  heightHeader: string,
+}
+
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: IPalette,
-    fonts: TFonts
+    fonts: IFonts,
+    spacing: ISpacing,
   }
 }
