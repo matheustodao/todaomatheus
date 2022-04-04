@@ -1,20 +1,10 @@
-import { Main } from '../styles';
 import useTranslate from '../hooks/useTranslate';
 
 export default function Home() {
-  const { translationHTMLMParse, i18n } = useTranslate();
-  function handleChangeLanguage() {
-    const currentLanguage = i18n.language;
-    return currentLanguage === 'en' ? i18n.changeLanguage('pt') : i18n.changeLanguage('en');
-  }
+  const { translationHTMLMParse } = useTranslate();
   return (
-    <Main>
+    <>
       {translationHTMLMParse('pages.aboutMe.description')}
-      <button type="button" onClick={handleChangeLanguage}>
-        Mudar para
-        {' '}
-        {i18n.language === 'en' ? 'pt' : 'en'}
-      </button>
-    </Main>
+    </>
   );
 }
