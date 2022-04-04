@@ -8,6 +8,8 @@ import Head from 'next/head';
 
 import GlobalStyle from '../styles/global';
 import { theme } from '../styles/themes';
+import Header from '../app/components/Header';
+import { Main } from '../styles';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { t } = useTranslation();
@@ -27,7 +29,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme.dark}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Header />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
       </ThemeProvider>
     </>
   );
