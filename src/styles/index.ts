@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+  width: 100vw;
+  height: 100%;
+  margin-top: ${({ theme }) => theme.spacing.heightHeader};
 
-
-  @media (min-width: 1200px) and (max-width: 100vw) {
-    margin-top: 17rem;
+  @media screen and (min-width: 1000px) {
+    margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
   }
 `;

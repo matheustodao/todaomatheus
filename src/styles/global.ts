@@ -25,6 +25,8 @@ export default createGlobalStyle`
   button {
     font-family: ${({ theme }) => theme.fonts.poppins};
     font-weight: 700;
+    cursor: pointer;
+    border: none;
   }
 
   a {
