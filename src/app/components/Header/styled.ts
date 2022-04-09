@@ -1,4 +1,5 @@
 import styled, { DefaultTheme } from 'styled-components';
+import { motion } from 'framer-motion';
 
 interface IRoute {
   theme: DefaultTheme,
@@ -48,12 +49,12 @@ export const NavigationWrapper = styled.div`
   }
 `;
 
-export const Navigation = styled.nav`
+export const Navigation = styled(motion.nav)`
   position: absolute;
-  bottom: -8.1rem;
+  bottom: -12rem;
   left: 0;
   width: 100%;
-  display: ${({ isVisible }: INavigation) => (isVisible ? 'block' : 'none')};
+  display: ${({ isVisible }: INavigation) => (isVisible && 'block')};
   background: ${({ theme }) => theme.colors.primary.main};
   ul {
     display: flex;
@@ -77,7 +78,6 @@ export const Navigation = styled.nav`
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem 1rem;
         + li {
           margin-left: 16px;
         }
@@ -94,6 +94,7 @@ export const Route = styled.li`
   justify-content: center;
   align-items: center;
   background: ${({ theme, active }: IRoute) => active && theme.colors.primary.light};
+  padding: 2rem 1rem;
 
   a {
     text-decoration: none;

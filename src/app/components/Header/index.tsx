@@ -1,7 +1,10 @@
-import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import useDimensions from '../../../hooks/useDimensions';
+
 import useTranslate from '../../../hooks/useTranslate';
+
 import {
   Container, LanguagesWrapper, Navigation, NavigationWrapper, Route,
 } from './styled';
@@ -9,7 +12,9 @@ import {
 export default function Header() {
   const { translation, i18n } = useTranslate();
   const router = useRouter();
-  const [isVisibleMenu, setIsVisibleMenu] = useState<boolean>(false);
+  const { doSizeIsBiggerThan } = useDimensions();
+  const { isWidthBigger } = doSizeIsBiggerThan(999);
+  const [isVisibleMenu, setIsVisibleMenu] = useState(isWidthBigger);
   const routes = [
     {
       id: 1,
@@ -30,6 +35,11 @@ export default function Header() {
     },
 
   ];
+
+  useEffect(() => {
+    window.addEventListener('resize', () => setIsVisibleMenu(isWidthBigger));
+    return () => window.removeEventListener('resize', () => setIsVisibleMenu(isWidthBigger));
+  }, [isWidthBigger]);
 
   function handleToggleModalVisibilityByClick() {
     setIsVisibleMenu((state) => !state);
@@ -67,9 +77,28 @@ export default function Header() {
             alt={`${translation('languages.english')}`}
           />
         </button>
-        <Navigation isVisible={isVisibleMenu}>
-          <ul>
+        <Navigation
+          isVisible={isVisibleMenu}
+          animate={isVisibleMenu ? 'open' : 'closed'}
+          variants={{
+            open: {
+              opacity: 1,
+              x: 0,
+              display: 'block',
 
+            },
+            closed: {
+              x: ['0px', '-100px'],
+              opacity: 0,
+              display: 'none',
+            },
+          }}
+          transition={{
+            ease: [0.17, 0.67, 0.83, 0.67],
+          }}
+
+        >
+          <ul>
             {routes.map((item) => (
               <Route key={item.id} active={item.path === router.asPath}>
                 <Link href={item.path}>
