@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Main = styled.main`
-  width: 100vw;
+export const Main = styled(motion.main)`
+  width: 100%;
   height: 100%;
   margin-top: ${({ theme }) => theme.spacing.heightHeader};
 
