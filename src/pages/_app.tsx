@@ -31,24 +31,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <ThemeProvider theme={theme.dark}>
         <GlobalStyle />
         <Header />
-        <AnimatePresence>
-          <Main
-            key={router.route}
-            exit="pageExit"
-            initial="pageInitial"
-            animate="pageAnimate"
-            variants={{
-              pageInitial: { opacity: 0, y: '-1000px' },
-              pageAnimate: { opacity: 1, y: 0 },
-              pageExit: {
-                y: '100px',
-                opacity: 0,
-              },
-            }}
-          >
-            <Component {...pageProps} />
-          </Main>
-        </AnimatePresence>
+        <div style={{ position: 'relative' }}>
+          <AnimatePresence>
+            <Main key={router.route}>
+              <Component {...pageProps} />
+            </Main>
+          </AnimatePresence>
+        </div>
       </ThemeProvider>
     </>
   );

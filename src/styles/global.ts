@@ -20,6 +20,7 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.primary.main};
     color: ${({ theme }) => theme.colors.text.main};
     height: 100vh;
+    overflow-x: hidden;
   }
 
   button {
