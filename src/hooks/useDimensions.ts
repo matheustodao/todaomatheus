@@ -1,15 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 export default function useDimensions() {
   const hasWindow = typeof window !== 'undefined';
   const [dimensions, setDimensions] = useState({ height: 0, width: 0 });
 
-  function doSizeIsBiggerThan(value: number) {
-    const isWidthBigger = dimensions.width >= value;
-    const isHeightBigger = dimensions.height >= value;
+  const doSizeIsBiggerThan = useCallback((value: number) => {
+    const isWidthBigger = hasWindow && window.innerWidth >= value;
+    const isHeightBigger = hasWindow && window.innerHeight >= value;
 
     return { isWidthBigger, isHeightBigger };
-  }
+  }, [hasWindow]);
 
   function handleResizeWindowDimensions() {
     setDimensions({

@@ -6,10 +6,6 @@ interface IRoute {
   active: boolean,
 }
 
-interface INavigation {
-  isVisible: boolean,
-}
-
 export const Container = styled.header`
   position: fixed;
   top: 0;
@@ -21,7 +17,7 @@ export const Container = styled.header`
   justify-content: space-between;
   padding: 1.2rem 1.6rem;
   background: ${({ theme }) => theme.colors.primary.main};
-
+  z-index: 10000;
   button {
     background: none;
     border: none;
@@ -49,41 +45,17 @@ export const NavigationWrapper = styled.div`
   }
 `;
 
-export const Navigation = styled(motion.nav)`
-  position: absolute;
-  bottom: -12rem;
-  left: 0;
+export const Routes = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  display: ${({ isVisible }: INavigation) => (isVisible && 'block')};
-  background: ${({ theme }) => theme.colors.primary.main};
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  z-index: 100;
 
-  @media screen and (min-width: 1000px) {
-    position: static;
+  @media screen and (min-width: 999px) {
     display: flex;
-    flex: 1;
-    ul {
-      display: flex;
-      flex-direction: row;
-
-      li {
-        border-radius: 8px;
-        min-width: 8.4rem;
-        width: max-content;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        + li {
-          margin-left: 16px;
-        }
-      }
-    }
+    flex-direction: row;
   }
+
 `;
 
 export const Route = styled.li`
@@ -103,5 +75,50 @@ export const Route = styled.li`
     font-size: 1.2rem;
     font-weight: ${({ active }) => (active ? 600 : 400)};
     color: #fff;
+  }
+
+  @media screen and (min-width: 999px) {
+    border-radius: 8px;
+    min-width: 8.4rem;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & + & {
+      margin-left: 16px;
+    }
+  }
+`;
+
+export const Navigation = styled(motion.nav).attrs(() => ({
+  variants: {
+    open: {
+      opacity: 1,
+      x: 0,
+    },
+
+    closed: {
+      display: 'none',
+      x: 100,
+      opacity: 0,
+    },
+  },
+
+  transition: {
+    ease: [0.17, 0.67, 0.83, 0.67],
+  },
+}))`
+  position: absolute;
+  bottom: -12rem;
+  left: 0;
+  width: 100%;
+  display: block;
+  background: ${({ theme }) => theme.colors.primary.main};
+  z-index: 100;
+
+  @media screen and (min-width: 1000px) {
+    position: static;
+    display: flex;
+    flex: 1;
   }
 `;
