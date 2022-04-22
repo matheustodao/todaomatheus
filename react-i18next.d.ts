@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import 'react-i18next';
 
-import { resources } from './src/i18n/locales';
+import { resources } from '@i18n/index';
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {
