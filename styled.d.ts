@@ -7,6 +7,7 @@ type TOptionsMainColorMain = {
 }
 
 interface IPalette {
+  mainBackground: string,
   primary: TOptionsMainColorMain,
 
   secondary: TOptionsMainColorMain,
@@ -18,6 +19,7 @@ interface IPalette {
     800: string,
     700: string,
     600: string,
+    500: string,
     100: string,
   },
 }

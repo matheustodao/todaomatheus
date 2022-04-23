@@ -5,6 +5,7 @@ export const dark: DefaultTheme = {
   ...commonStyle,
 
   colors: {
+    mainBackground: 'rgba(54, 58, 89, 0.29)',
     primary: {
       dark: 'none',
       main: '#25283D',
@@ -28,6 +29,7 @@ export const dark: DefaultTheme = {
       800: 'rgba(255, 255, 255, 0.8)',
       700: 'rgba(255, 255, 255, 0.73)',
       600: 'rgba(255, 255, 255, 0.65)',
+      500: 'rgba(255, 255, 255, 0.55)',
       100: 'rgba(255, 255, 255, 0.1)',
     },
   },
