@@ -7,19 +7,19 @@ interface IRoute {
 export const routes: IRoute[] = [
   {
     id: 1,
-    label: 'menuNavigation.home.name',
+    label: 'navigation.home.name',
     path: '/',
   },
 
   {
     id: 2,
-    label: 'menuNavigation.howIBuiltMyPortfolio.name',
+    label: 'navigation.how_i_built_my_portfolio.name',
     path: '/blog/posts/how-i-built-my-portfolio',
   },
 
   {
     id: 3,
-    label: 'menuNavigation.contact.name',
+    label: 'navigation.contact.name',
     path: '/contact',
   },
 

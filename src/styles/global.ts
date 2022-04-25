@@ -1,3 +1,9 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/effect-fade';
+
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
@@ -19,7 +25,6 @@ export default createGlobalStyle`
     font-weight: 400;
     background: ${({ theme }) => theme.colors.primary.main};
     color: ${({ theme }) => theme.colors.text.main};
-    height: 100vh;
     overflow-x: hidden;
   }
 

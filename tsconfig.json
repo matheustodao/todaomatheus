@@ -25,7 +25,6 @@
       "@components/*": ["app/components/*"],
       "@hooks/*": ["hooks/*"],
       "@type/*": ["types/*"],
-      "@i18n/*": ["i18n/*"],
       "@styles/*": ["styles/*"],
       "@themes/*": ["styles/themes/*"],
       "@public/*": ["../public/*"],

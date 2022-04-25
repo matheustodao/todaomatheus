@@ -12,7 +12,7 @@ import {
 import { routes } from './utils/routes';
 
 export default function Header() {
-  const { translation, i18n } = useTranslate();
+  const { translation } = useTranslate('common');
   const router = useRouter();
   const { doSizeIsBiggerThan } = useDimensions();
   const { isWidthBigger } = doSizeIsBiggerThan(999);
@@ -27,25 +27,26 @@ export default function Header() {
     setIsOpenMenu((state) => !state);
   }
 
-  function handleChangeLanguage(language: string) {
-    i18n.changeLanguage(language);
-  }
-
   return (
     <Container>
       <LanguagesWrapper>
-        <button type="button" onClick={() => handleChangeLanguage('en')}>
-          <img
-            src="/assets/icons/usa-flag.svg"
-            alt={`${translation('languages.english')}`}
-          />
-        </button>
-        <button type="button" onClick={() => handleChangeLanguage('pt')}>
-          <img
-            src="/assets/icons/brazil-flag.svg"
-            alt={`${translation('languages.portuguese')}`}
-          />
-        </button>
+        <Link href={router.asPath} locale="en-US">
+          <a>
+            <img
+              src="/assets/icons/usa-flag.svg"
+              alt={`${translation('languages.en-US')}`}
+            />
+          </a>
+        </Link>
+
+        <Link href={router.asPath} locale="pt-BR">
+          <a>
+            <img
+              src="/assets/icons/brazil-flag.svg"
+              alt={`${translation('languages.pt-BR')}`}
+            />
+          </a>
+        </Link>
       </LanguagesWrapper>
 
       <NavigationWrapper>
@@ -56,7 +57,7 @@ export default function Header() {
         >
           <img
             src="/assets/icons/menu.svg"
-            alt={`${translation('languages.english')}`}
+            alt={!isOpenMenu ? 'Open Menu' : 'Close Menu'}
           />
         </button>
         <AnimatePresence>
@@ -64,7 +65,7 @@ export default function Header() {
             <Routes>
               {routes.map((item) => (
                 <Route key={item.id} active={item.path === router.asPath}>
-                  <Link href={item.path}>
+                  <Link href={item.path} locale={router.locale}>
                     <a>
                       {translation(item.label)}
                     </a>

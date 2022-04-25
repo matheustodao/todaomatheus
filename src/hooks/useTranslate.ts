@@ -1,15 +1,21 @@
-import ReactHTMLParse from 'react-html-parser';
-import { useTranslation, Normalize } from 'react-i18next';
-import { ITranslation } from '@type/translation';
+import useTranslation from 'next-translate/useTranslation';
+import { TranslationQuery } from 'next-translate';
 
-export default function useTranslate() {
-  const { t, i18n } = useTranslation();
+import { ITranslationKeys, INamespaces } from '@type/TranslationKeys';
+
+export default function useTranslat<T extends INamespaces>(ns: INamespaces = 'common') {
+  const { t, lang } = useTranslation(ns);
 
   return {
-    translationHTMLMParse: (getTranslation: Normalize<ITranslation>) => (
-      ReactHTMLParse(t(getTranslation))
-    ),
-    translation: t,
-    i18n,
+    translation: (
+      s: ITranslationKeys[T],
+      q?: TranslationQuery,
+      o?: {
+        returnObjects?: boolean;
+        fallback?: string | string[];
+        default?: string;
+      },
+    ) => t(s, q, o),
+    lang,
   };
 }
