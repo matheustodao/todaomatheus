@@ -4,6 +4,7 @@ module.exports = {
   defaultNS: 'common',
   pages: {
     '*': ['common'],
+    '/404': ['common'],
     '/': ['home'],
     '/contact': ['contact'],
     '/blog/posts/who-is-matheus-todao': ['aboutMe'],

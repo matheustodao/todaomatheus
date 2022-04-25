@@ -2,7 +2,7 @@
   "greeting": "Hello, what's up?",
   "title": "I'm Matheus Todao ",
   "subtitle": "Frontend Developer",
-  "introduce": "<p>And I love programming/coding! <strong>Do you want to know a something funny?</strong></p> \n <p>I discovered the programming world when I was 12 years old (it was in november or december of 2017). I wanted to know how I could build an Android game without studying programming...</p>",
+  "introduce": "<p>And I love programming/coding! <strong>Do you want to know something funny?</strong></p> \n <p>I discovered the programming world when I was 12 years old (it was in november or december of 2017). I wanted to know how I could build an Android game without studying programming...</p>",
 
   "sections": {
     "my_skills": {
