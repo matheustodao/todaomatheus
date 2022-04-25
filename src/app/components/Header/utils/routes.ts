@@ -1,6 +1,6 @@
 interface IRoute {
   id: number,
-  label: string,
+  label: any,
   path: string,
 }
 
