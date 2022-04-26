@@ -220,3 +220,59 @@ export const DesireSkillContainer = styled.div`
     }
   }
 `;
+
+export const Hobby = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+
+  strong {
+    font-size: 1.6rem;
+    color: ${({ theme }) => theme.colors.text[800]};
+
+  }
+
+  .bullet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid ${({ theme }) => theme.colors.thirtiary.main};
+    list-style: georgian;
+    margin-right: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.04rem;
+    line-height: 38px;
+    color: ${({ theme }) => theme.colors.thirtiary.main};
+    font-weight: 500;
+    background: ${({ theme }) => theme.colors.primary.main};
+
+    @media screen and (min-width: 999px) {
+      background: ${({ theme }) => theme.colors.mainBackground};
+    };
+  }
+
+  & + & {
+    max-height: 30px;
+    margin-top: 180px;
+    margin-left: -7.9px;
+    &::before {
+    content: '';
+    margin-left: 0;
+    width: 7px;
+    min-height: 180px;
+    height: 100%;
+    position: relative;
+    left: 19px;
+    right: 0;
+    top: -106px;
+    background: ${({ theme }) => theme.colors.thirtiary.dark};
+    border-radius: 2px;
+  }
+  }
+
+`;

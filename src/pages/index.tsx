@@ -12,9 +12,11 @@ import {
   MainHeader,
   Skill,
   DesireSkillContainer,
+  Hobby,
 } from '@styles/pages/index';
 
 import { desireSkills, mySkills } from 'mocks/skills';
+import { romanize } from 'utils/romanize';
 
 export default function Home() {
   const { translation } = useTranslate('home');
@@ -101,6 +103,7 @@ export default function Home() {
                     src={desireSkill.path}
                     alt={desireSkill.name}
                     layout="responsive"
+                    priority
                     width={!desireSkill.width ? 72 : desireSkill.width}
                     height={!desireSkill.height ? 68 : desireSkill.height}
                   />
@@ -114,6 +117,31 @@ export default function Home() {
 
       <Section>
         <h3>{translation('sections.hobbies.name')}</h3>
+
+        <Hobby>
+          <span className="bullet">{romanize(1)}</span>
+          <strong>{translation('sections.hobbies.hobby.0')}</strong>
+        </Hobby>
+
+        <Hobby>
+          <span className="bullet">{romanize(2)}</span>
+          <strong>{translation('sections.hobbies.hobby.1')}</strong>
+        </Hobby>
+
+        <Hobby>
+          <span className="bullet">{romanize(3)}</span>
+          <strong>{translation('sections.hobbies.hobby.2')}</strong>
+        </Hobby>
+
+        <Hobby>
+          <span className="bullet">{romanize(4)}</span>
+          <strong>{translation('sections.hobbies.hobby.3')}</strong>
+        </Hobby>
+
+        <Hobby>
+          <span className="bullet">{romanize(5)}</span>
+          <strong>{translation('sections.hobbies.hobby.4')}</strong>
+        </Hobby>
       </Section>
     </>
   );

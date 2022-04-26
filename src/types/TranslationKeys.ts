@@ -1,36 +1,42 @@
 import { Paths } from './Paths';
 
-type ISection = { name: string, subtitle?: string }
+type TSection = { name: string, subtitle?: string }
 
-type IRouteNavigation = { name: string }
+type TRouteNavigation = { name: string }
 
-type IPage = { title: string, subtitle?: string }
+type TPage = { title: string, subtitle?: string }
 
-export interface IHome extends IPage {
+export interface IHome extends TPage {
   greeting: string,
   introduce: string,
 
   sections: {
-    'my_skills': ISection,
+    'my_skills': TSection,
 
-    'skills_of_my_interest': ISection,
+    'skills_of_my_interest': TSection,
 
-    hobbies: ISection & {
-      hobby: Array<string>
+    hobbies: TSection & {
+      hobby: {
+        '0': string,
+        '1': string,
+        '2': string,
+        '3': string,
+        '4': string,
+      }
     },
 
-    'what_i_have_made_up': ISection,
+    'what_i_have_made_up': TSection,
 
-    'that_is_it': ISection & {
+    'that_is_it': TSection & {
       description: string,
       'link-text': string
     }
   }
 }
 
-export type IContact = IPage;
+export type IContact = TPage;
 
-export interface IAbout extends IPage {
+export interface IAbout extends TPage {
   description: string
 }
 
@@ -42,9 +48,9 @@ export interface ICommon {
   }
 
   navigation: {
-    home: IRouteNavigation,
-    contact: IRouteNavigation,
-    'how_i_built_my_portfolio': IRouteNavigation
+    home: TRouteNavigation,
+    contact: TRouteNavigation,
+    'how_i_built_my_portfolio': TRouteNavigation
   },
 
   languages: {
