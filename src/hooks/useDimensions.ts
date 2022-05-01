@@ -12,18 +12,21 @@ export default function useDimensions() {
   }, [hasWindow]);
 
   function handleResizeWindowDimensions() {
-    setDimensions({
+    setDimensions((state) => ({
+      ...state,
       width: window.innerWidth,
       height: window.innerHeight,
-    });
+    }));
   }
 
   useEffect(() => {
     if (hasWindow) {
-      setDimensions({
+      setDimensions((state) => ({
+        ...state,
         width: window.innerWidth,
         height: window.innerHeight,
-      });
+      }));
+
       window.addEventListener('resize', handleResizeWindowDimensions);
     }
     return () => window.removeEventListener('resize', handleResizeWindowDimensions);

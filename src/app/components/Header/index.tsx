@@ -16,7 +16,7 @@ export default function Header() {
   const router = useRouter();
   const { doSizeIsBiggerThan } = useDimensions();
   const { isWidthBigger } = doSizeIsBiggerThan(999);
-  const [isOpenMenu, setIsOpenMenu] = useState<boolean | null>(isWidthBigger ?? true);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean | null>(isWidthBigger);
 
   useEffect(() => {
     window.addEventListener('resize', () => setIsOpenMenu(isWidthBigger));

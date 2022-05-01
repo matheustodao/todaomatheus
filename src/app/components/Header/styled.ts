@@ -38,7 +38,7 @@ export const NavigationWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 999px) {
     .isVisibleIconMenu {
       display: none;
     }
@@ -81,7 +81,7 @@ export const Route = styled.li`
     border-radius: 8px;
     min-width: 8.4rem;
     width: max-content;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     & + & {
