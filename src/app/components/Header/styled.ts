@@ -29,7 +29,7 @@ export const LanguagesWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
-  button + button {
+  a + a {
     margin-left: .8rem;
   }
 `;

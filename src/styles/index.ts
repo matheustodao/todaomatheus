@@ -47,15 +47,13 @@ export const Main = styled(motion.main).attrs(() => ({
   width: 100%;
   padding: 0 1.9rem;
 
-  padding-top: ${({ theme }) => theme.spacing.heightHeader};
+  padding-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
   padding-bottom: 2.4rem;
   @media screen and (min-width: 999px) {
     min-height: 53.5rem;
     max-height: 100%;
     max-width: 1138px;
     align-self: center;
-    /* padding-top: 0; */
-    margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
     border-radius: 2.2rem;
     background: ${({ theme }) => theme.colors.mainBackground};
   };

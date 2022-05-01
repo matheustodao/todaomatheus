@@ -181,6 +181,14 @@ export const DesireSkillContainer = styled.div`
   width: 100%;
   margin-right: 0;
 
+  .swiper {
+    height: 175px;
+
+    .swiper-pagination {
+      bottom: 0px;
+    }
+  }
+
   ul.swiper-wrapper {
     width: 100cm;
   }
@@ -250,7 +258,7 @@ export const Hobby = styled.div`
     color: ${({ theme }) => theme.colors.thirtiary.main};
     font-weight: 500;
     background: ${({ theme }) => theme.colors.primary.main};
-
+    z-index: 50;
     @media screen and (min-width: 999px) {
       background: ${({ theme }) => theme.colors.mainBackground};
     };
@@ -258,21 +266,22 @@ export const Hobby = styled.div`
 
   & + & {
     max-height: 30px;
-    margin-top: 180px;
+    margin-top: 178px;
     margin-left: -7.9px;
     &::before {
-    content: '';
-    margin-left: 0;
-    width: 7px;
-    min-height: 180px;
-    height: 100%;
-    position: relative;
-    left: 19px;
-    right: 0;
-    top: -106px;
-    background: ${({ theme }) => theme.colors.thirtiary.dark};
-    border-radius: 2px;
-  }
+      /* Vertical Line */
+      content: '';
+      margin-left: 0;
+      width: 7px;
+      min-height: 180px;
+      height: 100%;
+      position: relative;
+      left: 2rem;
+      right: 0;
+      top: -104px;
+      background: ${({ theme }) => theme.colors.thirtiary.dark};
+      border-radius: 0px;
+    }
   }
 
 `;
