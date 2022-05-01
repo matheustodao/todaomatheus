@@ -1,14 +1,15 @@
-import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import useDimensions from '@hooks/useDimensions';
 
+import useDimensions from '@hooks/useDimensions';
 import useTranslate from '@hooks/useTranslate';
 
 import {
   Container, LanguagesWrapper, Navigation, NavigationWrapper, Route, Routes,
 } from './styled';
+
 import { routes } from './utils/routes';
 
 export default function Header() {
@@ -56,8 +57,10 @@ export default function Header() {
           onClick={handleToggleModalVisibilityByClick}
         >
           <img
+            width={32}
+            height={32}
             src="/assets/icons/menu.svg"
-            alt={!isOpenMenu ? 'Open Menu' : 'Close Menu'}
+            alt={(!isOpenMenu || false) ? 'Open Menu' : 'Close Menu'}
           />
         </button>
         <AnimatePresence>
