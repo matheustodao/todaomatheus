@@ -285,3 +285,16 @@ export const Hobby = styled.div`
   }
 
 `;
+
+export const ProjectListContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(1, minmax(38rem, 1fr));
+  place-items: center;
+  gap: 21px 25px;
+  margin-bottom: 10rem;
+
+  @media screen and (min-width: 820px) {
+    grid-template-columns: repeat(2, minmax(38rem, 1fr));
+    place-items: left;
+  }
+`;

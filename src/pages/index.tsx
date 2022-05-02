@@ -13,10 +13,12 @@ import {
   Skill,
   DesireSkillContainer,
   Hobby,
+  ProjectListContainer,
 } from '@styles/pages/index';
 
 import { desireSkills, mySkills } from 'mocks/skills';
 import { romanize } from 'utils/romanize';
+import ProjectCard from '@components/pages/index/ProjectList/ProjectCard';
 
 export default function Home() {
   const { translation } = useTranslate('home');
@@ -142,6 +144,26 @@ export default function Home() {
           <span className="bullet">{romanize(5)}</span>
           <strong>{translation('sections.hobbies.hobby.4')}</strong>
         </Hobby>
+      </Section>
+
+      <Section>
+        <h3>{translation('sections.what_i_have_made_up.name')}</h3>
+
+        <ProjectListContainer>
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+        </ProjectListContainer>
+
+        <AnchorButton
+          filled
+          options={{
+            margin: 'auto',
+          }}
+          href="https://github.com/matheustodao?tab=repositories"
+        >
+          {translationCommon('text_button.see-all-projects')}
+        </AnchorButton>
       </Section>
     </>
   );

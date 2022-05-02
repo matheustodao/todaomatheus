@@ -1,9 +1,11 @@
-import styled, { DefaultTheme, css } from 'styled-components';
+import styled, { DefaultTheme, css, CSSObject } from 'styled-components';
 
 interface IProps {
   theme: DefaultTheme,
   filled?: boolean,
+  options?: CSSObject,
 }
+
 export const AnchorButton = styled.a`
   display: flex;
   align-items: center;
@@ -19,6 +21,7 @@ export const AnchorButton = styled.a`
   padding: 1.1rem 2rem;
   border-radius: 5px;
   min-width: 11.1rem;
+  max-width: 16.6rem;
   min-height: 4.1rem;
   cursor: pointer;
 
@@ -28,4 +31,6 @@ export const AnchorButton = styled.a`
     font-size: 1.4rem;
     text-decoration: none;
   `}
+
+  ${({ options }: IProps) => options && css`${options}`};
 `;
