@@ -34,5 +34,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'consistent-return': 'off',
+    'react/no-danger': 'off',
   },
 };
