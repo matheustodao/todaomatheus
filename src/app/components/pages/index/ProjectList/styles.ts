@@ -60,6 +60,6 @@ export const Tags = styled.span`
   font-family: ${({ theme }) => theme.fonts.poppins};
   font-weight: 400;
   color: ${({ theme }) => theme.colors.text.main};
-  background: ${({ theme }) => theme.colors.thirtiary.main};
+  background: ${({ theme }) => theme.colors.tertiary.main};
   border-radius: .5rem;
 `;

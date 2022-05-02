@@ -12,7 +12,7 @@ interface IPalette {
 
   secondary: TOptionsMainColorMain,
 
-  thirtiary: TOptionsMainColorMain,
+  tertiary: TOptionsMainColorMain,
 
   text: {
     main: string,

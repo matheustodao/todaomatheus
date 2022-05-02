@@ -12,7 +12,7 @@ export const MainHeader = styled.header`
   .wrapper__image {
     width: 15.4rem;
     height: 15.4rem;
-    border: 2px solid ${({ theme }) => theme.colors.thirtiary.main};
+    border: 2px solid ${({ theme }) => theme.colors.tertiary.main};
     border-radius: 46px;
     background: url('/assets/images/profile.jpg') no-repeat;
     background-size: cover;
@@ -149,7 +149,7 @@ export const Skill = styled.li`
   align-items: center;
   justify-content: flex-start;
   padding: 1rem 1.8rem;
-  background: ${({ theme }) => theme.colors.thirtiary.light};
+  background: ${({ theme }) => theme.colors.tertiary.light};
   border-radius: 10px;
   list-style: none;
 
@@ -248,14 +248,14 @@ export const Hobby = styled.div`
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
-    border: 1px solid ${({ theme }) => theme.colors.thirtiary.main};
+    border: 1px solid ${({ theme }) => theme.colors.tertiary.main};
     list-style: georgian;
     margin-right: 25px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.6rem;
     letter-spacing: 0.04rem;
     line-height: 38px;
-    color: ${({ theme }) => theme.colors.thirtiary.main};
+    color: ${({ theme }) => theme.colors.tertiary.main};
     font-weight: 500;
     background: ${({ theme }) => theme.colors.primary.main};
     z-index: 50;
@@ -279,7 +279,7 @@ export const Hobby = styled.div`
       left: 2rem;
       right: 0;
       top: -104px;
-      background: ${({ theme }) => theme.colors.thirtiary.dark};
+      background: ${({ theme }) => theme.colors.tertiary.dark};
       border-radius: 0px;
     }
   }

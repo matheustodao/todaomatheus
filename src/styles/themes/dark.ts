@@ -18,7 +18,7 @@ export const dark: DefaultTheme = {
       light: '#FF6A38',
     },
 
-    thirtiary: {
+    tertiary: {
       dark: 'rgba(116, 53, 156, 0.7)',
       main: '#C04CFD',
       light: 'rgba(116, 53, 156, 0.65)',
