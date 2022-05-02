@@ -15,7 +15,7 @@ export const dark: DefaultTheme = {
     secondary: {
       dark: 'rgba(255, 64, 0, 0.86)',
       main: '#FF4000',
-      light: 'none',
+      light: '#FF6A38',
     },
 
     thirtiary: {

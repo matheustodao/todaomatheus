@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import Link from 'next/link';
 import Image from 'next/image';
 import { TransTyped } from '@components/Helpers/TransTyped';
@@ -14,6 +15,7 @@ import {
   DesireSkillContainer,
   Hobby,
   ProjectListContainer,
+  DescriptionSection,
 } from '@styles/pages/index';
 
 import { desireSkills, mySkills } from 'mocks/skills';
@@ -164,6 +166,23 @@ export default function Home() {
         >
           {translationCommon('text_button.see-all-projects')}
         </AnchorButton>
+      </Section>
+
+      <Section>
+        <h3
+          style={{
+            textTransform: 'none',
+          }}
+        >
+          {translation('sections.that_is_it.name')}
+        </h3>
+
+        <DescriptionSection>
+          <TransTyped
+            i18nKey="home:sections.that_is_it.description"
+            components={{ p: <p />, Link: <Link href="/blog/posts/how-i-built-my-portfolio" /> }}
+          />
+        </DescriptionSection>
       </Section>
     </>
   );

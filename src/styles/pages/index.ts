@@ -298,3 +298,16 @@ export const ProjectListContainer = styled.div`
     place-items: left;
   }
 `;
+
+export const DescriptionSection = styled.p`
+  font-size: 1.4rem;
+  color: ${({ theme }) => theme.colors.text[600]};
+  letter-spacing: 0.07em;
+  line-height: 20px;
+  max-width: 270px;
+
+  a {
+    color: ${({ theme }) => theme.colors.secondary.light};
+    font-weight: 600;
+  }
+`;
