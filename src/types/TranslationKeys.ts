@@ -29,7 +29,6 @@ export interface IHome extends TPage {
 
     'that_is_it': TSection & {
       description: string,
-      'link-text': string
     }
   }
 }

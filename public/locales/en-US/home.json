@@ -30,8 +30,7 @@
 
     "that_is_it": {
       "name": "That's it!",
-      "description": "But if you want to know how was the process to build this portfolio. <br /> Click here:",
-      "link-text": "How I built my portfolio."
+      "description": "But if you want to know how was the process to build this portfolio. Click here: <Link>How I built my portfolio</Link>"
     }
   }
 

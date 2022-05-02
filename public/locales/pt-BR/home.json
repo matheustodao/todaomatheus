@@ -30,8 +30,7 @@
 
     "that_is_it": {
       "name": "E é isso!",
-      "description": "Mas se você quer saber como foi o processo para montar esse portfolio. <br /> Clique Aqui:",
-      "link-text": "Como eu montei o meu portfolio."
+      "description": "Mas se você quer saber como foi o processo para montar esse portfolio. Clique Aqui: <Link>Como eu montei o meu portfolio</Link>"
     }
 
   }
