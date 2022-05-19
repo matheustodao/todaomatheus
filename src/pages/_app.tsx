@@ -5,9 +5,11 @@ import { AnimatePresence } from 'framer-motion';
 
 import Head from 'next/head';
 
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+
 import GlobalStyle from '@styles/global';
 import { theme } from '@styles/themes';
-import Header from '@components/Header';
 import { Main } from '@styles/index';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
@@ -39,6 +41,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             </Main>
           </AnimatePresence>
         </div>
+        <Footer />
       </ThemeProvider>
     </>
   );
