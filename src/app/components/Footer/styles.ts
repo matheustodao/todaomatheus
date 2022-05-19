@@ -2,21 +2,23 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
   width: 100%;
-  height: 8rem;
+  height: 10rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #303840;
+  background: ${({ theme }) => theme.colors.primary.light};
   color: #fff;
   font-size: 1.1rem;
+  margin-top: 10rem;
+  clip-path: polygon(51% 0, 89% 12%, 100% 0, 100% 100%, 0 97%, 0 0, 24% 15%);
 
-  h4 {
+  strong {
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     a {
       color: #4ECDC4;
       text-decoration: none;
@@ -27,7 +29,7 @@ export const Container = styled.footer`
   @media (min-width: 1200px) and (max-width: 100vw) {
     font-size: 1.2rem;
 
-    h4 {
+    strong {
       font-size: 1.4rem;
     }
   }

@@ -6,18 +6,18 @@ export default function Footer() {
     <Container>
       <div>
         <span>
-          © 2021 -
+          ©
           {' '}
           {currentYear}
         </span>
 
-        <h4>
+        <strong>
           Devoloped and design
           {' '}
           <a href="https://linkedin.com/in/matheustodao">
             by Matheus Todao
           </a>
-        </h4>
+        </strong>
       </div>
     </Container>
   );
