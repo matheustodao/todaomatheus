@@ -28,6 +28,7 @@
       "@styles/*": ["styles/*"],
       "@themes/*": ["styles/themes/*"],
       "@public/*": ["../public/*"],
+      "@services/*": ["services/*"],
       "@mocks/*": ["mocks/*"]
     }
   },

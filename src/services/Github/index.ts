@@ -1,0 +1,1 @@
+export { getPinnedRepos } from './getPinnedRepos';

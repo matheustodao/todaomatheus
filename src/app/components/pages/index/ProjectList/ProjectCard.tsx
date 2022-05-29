@@ -1,32 +1,42 @@
-import { limitTextLenght } from 'utils/limitTextLenght';
+import { RepoPinned } from '@type/PinnedItems';
+import React from 'react';
 
 import { Container, WrapperTags, Tags } from './styles';
 
-const descriptionHTML = '<div>[CRUD] Colocando em <strong>prática</strong> conhecimentos adquiridos sobre ReactJS, NodeJS, PostgreSQL, Styled-Components.</div>';
+interface IProps {
+  repos: RepoPinned[],
+}
 
-export default function ProjectCard() {
+export default function ProjectCard({ repos }: IProps) {
   return (
-    <Container>
-      <div className="information">
-        <h5>
-          <a target="__blank" href="https://github.com/matheustodao/MyContacts">MyContacts</a>
-        </h5>
+    <>
+      {repos.map((item) => (
+        <Container key={item.name}>
+          <div className="information">
+            <h5>
+              <a target="__blank" href={item.url}>{item.name}</a>
+            </h5>
 
-        {descriptionHTML.length > 0 && (
-        <p
-          dangerouslySetInnerHTML={{
-            __html: limitTextLenght(descriptionHTML.replace('<div>', '').replace('</div>', '')),
-          }}
-        />
-        )}
-      </div>
+            {item.descriptionHTML.length > 0 && (
+            <p
+              dangerouslySetInnerHTML={{
+                __html: item.descriptionHTML,
+              }}
+            />
+            )}
+          </div>
 
-      <WrapperTags>
-        <Tags>javascript</Tags>
-        <Tags>html</Tags>
-        <Tags>styled-components</Tags>
-        <Tags>node</Tags>
-      </WrapperTags>
-    </Container>
+          <WrapperTags>
+            {item.languages.edges.map(({ node }) => (
+              <Tags key={node.name}>{node.name}</Tags>
+            ))}
+
+            {item.repositoryTopics.nodes.map(({ topic }) => (
+              <Tags key={topic.name}>{topic.name}</Tags>
+            ))}
+          </WrapperTags>
+        </Container>
+      ))}
+    </>
   );
 }

@@ -14,12 +14,15 @@ export const Container = styled.div`
   height: 100%;
 
   .information {
-    margin-bottom: 2.9rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     min-height: 74px;
+    
+    :not(p) {
+      justify-content: flex-end;
+    }
 
     h5 {
       a {
@@ -29,6 +32,7 @@ export const Container = styled.div`
         letter-spacing: 0.04em;
         color: ${({ theme }) => theme.colors.text.main};
         text-decoration: none;
+        text-transform: capitalize;
       }
 
       + p {
@@ -40,7 +44,8 @@ export const Container = styled.div`
       font-family: ${({ theme }) => theme.fonts.inter};
       font-weight: 400;
       font-size: 1.4rem;
-      max-width: 28.5rem;
+      max-width: 168ch;
+      max-height: 68px;
       color: ${({ theme }) => theme.colors.text[600]};
     }
   }
@@ -53,6 +58,7 @@ export const WrapperTags = styled.div`
   flex-wrap: wrap;
   width: 100%;
   gap: .3rem;
+  margin-top: 2.9rem;
 `;
 
 export const Tags = styled.span`

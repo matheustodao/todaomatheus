@@ -1,4 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
+import dynamic from 'next/dynamic';
+import { RepoPinned } from '@type/PinnedItems';
+
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { TransTyped } from '@components/Helpers/TransTyped';
@@ -18,11 +21,21 @@ import {
   DescriptionSection,
 } from '@styles/pages/index';
 
+import { getPinnedRepos } from '@services/Github';
+
 import { desireSkills, mySkills } from 'mocks/skills';
 import { romanize } from 'utils/romanize';
-import ProjectCard from '@components/pages/index/ProjectList/ProjectCard';
+// import ProjectCard from '@components/pages/index/ProjectList/ProjectCard';
 
-export default function Home() {
+const ProjectCard = dynamic(() => (
+  import('@components/pages/index/ProjectList/ProjectCard')
+), { ssr: false });
+
+interface IProps {
+  repos: RepoPinned[],
+}
+
+export default function Home({ repos }: IProps) {
   const { translation } = useTranslate('home');
   const { translation: translationCommon } = useTranslate();
 
@@ -152,16 +165,12 @@ export default function Home() {
         <h3>{translation('sections.what_i_have_made_up.name')}</h3>
 
         <ProjectListContainer>
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          <ProjectCard repos={repos} />
         </ProjectListContainer>
 
         <AnchorButton
           filled
-          options={{
-            margin: 'auto',
-          }}
+          options={{ margin: 'auto' }}
           href="https://github.com/matheustodao?tab=repositories"
         >
           {translationCommon('text_button.see-all-projects')}
@@ -187,3 +196,15 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { data } = await getPinnedRepos;
+
+  return {
+    props: {
+      repos: data.viewer.pinnedItems.nodes,
+    },
+
+    revalidate: 10,
+  };
+};
