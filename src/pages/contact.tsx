@@ -3,11 +3,14 @@ import Image from 'next/image';
 import { Container, WayOfContact } from '@styles/pages/contacts';
 
 import { contacts } from '@mocks/contacts';
+import useTranslate from '@hooks/useTranslate';
 
 export default function Contact() {
+  const { translation } = useTranslate('contact');
+
   return (
     <Container>
-      <h1>Reach Me</h1>
+      <h1>{translation('title')}</h1>
 
       <div className="container__way__of__contact">
         {contacts.map((contact) => (
