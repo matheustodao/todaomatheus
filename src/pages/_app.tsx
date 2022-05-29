@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react';
 import { ThemeProvider } from 'styled-components';
 import useTranslation from 'next-translate/useTranslation';
 import { AppProps } from 'next/app';
@@ -11,6 +12,15 @@ import Footer from '@components/Footer';
 import GlobalStyle from '@styles/global';
 import { theme } from '@styles/themes';
 import { Main } from '@styles/index';
+
+const wrapperStyleElements: CSSProperties = {
+  position: 'relative',
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  height: '100%',
+  marginTop: 100,
+};
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const { t } = useTranslation();
@@ -31,10 +41,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <ThemeProvider theme={theme.dark}>
         <GlobalStyle />
         <Header />
-        <div style={{
-          position: 'relative', width: '100%', height: '100%', display: 'flex', flexDirection: 'column',
-        }}
-        >
+        <div style={wrapperStyleElements}>
           <AnimatePresence>
             <Main key={router.route}>
               <Component {...pageProps} />
