@@ -28,4 +28,9 @@ export const Container = styled.footer`
     margin-top: 1.2rem;
     font-weight: 500;
   }
+
+  @media screen and (min-width: 1380px) {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
 `;

@@ -20,6 +20,11 @@ export default createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.inter};
   }
 
+  html {
+    max-width: 1365px;
+    margin: auto;
+  }
+
   body {
     font-size: 1rem;
     font-weight: 400;

@@ -7,7 +7,7 @@ interface IRoute {
 }
 
 export const Container = styled.header`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -18,6 +18,8 @@ export const Container = styled.header`
   padding: 1.2rem 1.6rem;
   background: ${({ theme }) => theme.colors.primary.main};
   z-index: 10000;
+  max-width: 1365px;
+
   button {
     background: none;
     border: none;
