@@ -45,10 +45,9 @@ export const Main = styled(motion.main).attrs(() => ({
   },
 }))`
   width: 100%;
-  padding: 0 1.9rem;
+  padding: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`} 1.9rem;
 
-  padding-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
-  padding-bottom: 2.4rem;
+  margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
   @media screen and (min-width: 999px) {
     min-height: 53.5rem;
     max-height: 100%;

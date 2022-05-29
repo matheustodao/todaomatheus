@@ -19,7 +19,6 @@ const wrapperStyleElements: CSSProperties = {
   flexDirection: 'column',
   width: '100%',
   height: '100%',
-  marginTop: 16,
 };
 
 function MyApp({ Component, pageProps, router }: AppProps) {
