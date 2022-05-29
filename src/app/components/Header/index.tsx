@@ -60,7 +60,7 @@ export default function Header() {
             width={32}
             height={32}
             src="/assets/icons/menu.svg"
-            alt={(!isOpenMenu || false) ? 'Open Menu' : 'Close Menu'}
+            alt={(isOpenMenu && !isWidthBigger) ? 'Close Menu' : 'Open Menu'}
           />
         </button>
         <AnimatePresence>

@@ -7,7 +7,7 @@ interface IRoute {
 }
 
 export const Container = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
