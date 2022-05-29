@@ -288,7 +288,7 @@ export const Hobby = styled.div`
 
 export const ProjectListContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, minmax(38rem, 1fr));
+  grid-template-columns: 1fr;
   place-items: center;
   gap: 21px 25px;
   margin-bottom: 10rem;
