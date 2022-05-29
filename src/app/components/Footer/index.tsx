@@ -1,24 +1,21 @@
-import { Container } from './styles';
+import { Container } from './style';
+
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
   return (
     <Container>
-      <div>
-        <span>
-          ©
-          {' '}
-          {currentYear}
-        </span>
+      <p>
+        Developed and Designed by
+        {' '}
+        <a href="https://linkedin.com/in/matheustodao">Matheus Todao</a>
+      </p>
 
-        <strong>
-          Devoloped and design
-          {' '}
-          <a href="https://linkedin.com/in/matheustodao">
-            by Matheus Todao
-          </a>
-        </strong>
-      </div>
+      <strong>
+        ©
+        {' '}
+        {currentYear}
+      </strong>
     </Container>
   );
 }
