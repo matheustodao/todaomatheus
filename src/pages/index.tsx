@@ -25,7 +25,6 @@ import { getPinnedRepos } from '@services/Github';
 
 import { desireSkills, mySkills } from 'mocks/skills';
 import { romanize } from 'utils/romanize';
-// import ProjectCard from '@components/pages/index/ProjectList/ProjectCard';
 
 const ProjectCard = dynamic(() => (
   import('@components/pages/index/ProjectList/ProjectCard')
