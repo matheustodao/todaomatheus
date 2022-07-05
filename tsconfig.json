@@ -25,10 +25,11 @@
       "@components/*": ["app/components/*"],
       "@hooks/*": ["hooks/*"],
       "@type/*": ["types/*"],
-      "@styles/*": ["styles/*"],
-      "@themes/*": ["styles/themes/*"],
+      "@styles/*": ["app/styles/*"],
+      "@themes/*": ["app/styles/themes/*"],
       "@public/*": ["../public/*"],
       "@services/*": ["services/*"],
+      "@configs/*": ["configs/*"],
       "@mocks/*": ["mocks/*"]
     }
   },
