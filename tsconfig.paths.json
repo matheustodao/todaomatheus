@@ -10,7 +10,7 @@
       "@configs/*": ["configs/*"],
       "@services/*": ["services/*"],
       "@hooks/*": ["hooks/*"],
-      "@types/*": ["types/*"],
+      "@type/*": ["types/*"],
       "@mocks/*": ["mocks/*"]
     },
   }
