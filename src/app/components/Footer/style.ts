@@ -2,7 +2,8 @@ import styled from 'styled-components';
 // import bgFooter from '@public/assets/images/bg_footer.png';
 
 export const Container = styled.footer`
-  background: ${({ theme }) => theme.colors.primary.light};
+  background: url('/assets/images/footer.svg');
+  width: 100%;
   padding: 8.5rem 4.6rem;
   height: 113px;
   margin-top: 6.7rem;
