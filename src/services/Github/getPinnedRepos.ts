@@ -1,7 +1,7 @@
 import { PinnedItems } from '@type/PinnedItems';
 
-import { GithubClient } from 'services/apollo-clients/github';
 import { gql, ApolloQueryResult } from '@apollo/client';
+import { GithubClient } from '@configs/apis/github';
 
 export const getPinnedRepos: Promise<ApolloQueryResult<PinnedItems>> = GithubClient.query({
   query: gql`
