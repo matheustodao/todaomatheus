@@ -9,7 +9,8 @@ interface IRoute {
 export const Container = styled.header`
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   display: flex;
   flex-direction: row;
