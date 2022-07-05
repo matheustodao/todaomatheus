@@ -21,8 +21,8 @@ export default createGlobalStyle`
   }
 
   html {
-    max-width: 1365px;
-    margin: auto;
+    max-width: 1366px;
+    margin: 0 auto;
   }
 
   body {
