@@ -1,0 +1,38 @@
+{
+  "greeting": "Oi, tudo bem?",
+  "title": "Eu sou Matheus Todao",
+  "subtitle": "Desenvolvedor Frontend",
+  "introduce": "<p>E eu amo programação/codar! <strong>Você quer saber um fato engraçado?</strong></p> \n <p>Eu descobri o mundo da programação quando tinha 12 anos (lá em novembro ou dezembro de 2017). Eu procurei como eu poderia criar um jogo para Android sem estudar programação…</p>",
+
+  "sections": {
+    "my_skills": {
+      "name": "Minhas habilidades"
+    },
+
+    "skills_of_my_interest": {
+      "name": "Habilidades do meu interesse"
+    },
+
+    "hobbies": {
+      "name": "Hobbies",
+      "hobby": [
+        "Designing UI",
+        "Estudar sobre finanças",
+        "Ler livros",
+        "Assistir documentários",
+        "E muito mais!"
+      ]
+    },
+
+    "what_i_have_made_up": {
+      "name": "O que eu tenho feito"
+    },
+
+    "that_is_it": {
+      "name": "E é isso!",
+      "description": "Mas se você quer saber como foi o processo para montar esse portfolio. Clique Aqui: <Link>Como eu montei o meu portfolio</Link>"
+    }
+
+  }
+
+}
