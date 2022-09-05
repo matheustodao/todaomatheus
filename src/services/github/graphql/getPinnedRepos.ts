@@ -1,25 +1,21 @@
-import { PinnedItems } from '@type/PinnedItems';
+import { gql } from '@apollo/client';
 
-import { gql, ApolloQueryResult } from '@apollo/client';
-import { GithubClient } from '@configs/apis/github';
-
-export const getPinnedRepos: Promise<ApolloQueryResult<PinnedItems>> = GithubClient.query({
-  query: gql`
-    query getPinnedRepos {
+export const getPinnedRepos = gql`
+    query GetPinnedRepos($repos: Int!, $topics: Int!, $language: Int!) {
       viewer {
-        pinnedItems(first: 6) {
+        pinnedItems(first: $repos) {
           nodes {
             ... on Repository {
               name
               url
-              repositoryTopics(first: 2) {
+              repositoryTopics(first: $topics) {
                 nodes {
                   topic {
                     name
                   }
                 }
               }
-              languages(first: 2) {
+              languages(first: $language) {
                 edges {
                   node {
                     name
@@ -32,5 +28,4 @@ export const getPinnedRepos: Promise<ApolloQueryResult<PinnedItems>> = GithubCli
         }
       }
     }
-  `,
-});
+`;

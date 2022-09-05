@@ -1,15 +1,17 @@
-import dynamic from 'next/dynamic';
-import { RepoPinned } from '@type/PinnedItems';
-
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TransTyped } from '@components/Helpers/TransTyped';
-import useTranslate from '@hooks/useTranslate';
+import dynamic from 'next/dynamic';
 import { Mousewheel, Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { RepoPinned } from '@type/github/PinnedItems';
+
+import { TransTyped } from '@components/Helpers/TransTyped';
 import { AnchorButton } from '@components/AnchorButton';
+
+import useTranslate from '@hooks/useTranslate';
+
 import { Section } from '@styles/index';
 import {
   Content,
@@ -21,7 +23,7 @@ import {
   DescriptionSection,
 } from '@styles/pages/index';
 
-import { getPinnedRepos } from '@services/Github';
+import GithubService from '@services/github';
 
 import { desireSkills, mySkills } from 'mocks/skills';
 import { romanize } from 'utils/romanize';
@@ -196,14 +198,12 @@ export default function Home({ repos }: IProps) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await getPinnedRepos;
+export const getServerSideProps: GetServerSideProps = async () => {
+  const { data } = await GithubService.listPinnedRepositories();
 
   return {
     props: {
       repos: data.viewer.pinnedItems.nodes,
     },
-
-    revalidate: 10,
   };
 };
