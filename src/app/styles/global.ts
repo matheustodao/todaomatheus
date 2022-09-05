@@ -25,10 +25,6 @@ export default createGlobalStyle`
     margin: 0 auto;
   }
 
-  html, body {
-    height: 100vh;
-  }
-
   body {
     font-size: 1rem;
     font-weight: 400;

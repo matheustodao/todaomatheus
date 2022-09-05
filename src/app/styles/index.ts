@@ -45,7 +45,7 @@ export const Main = styled(motion.main).attrs(() => ({
   },
 }))`
   width: 100%;
-  height: 100vh;
+
   padding: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`} 1.9rem;
 
   margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
