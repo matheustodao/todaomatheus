@@ -19,6 +19,10 @@ export default function Header() {
   const { widthOverlimit } = dimensionsOverlimit(999);
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(true);
   useEffect(() => {
+    if (router.pathname) {
+      setIsOpenMenu(false);
+    }
+
     if (widthOverlimit) {
       setIsOpenMenu(true);
     }
@@ -26,7 +30,7 @@ export default function Header() {
     if (!widthOverlimit) {
       setIsOpenMenu(false);
     }
-  }, [widthOverlimit]);
+  }, [widthOverlimit, router.pathname]);
 
   function handleToggleModalVisibilityByClick() {
     setIsOpenMenu((state) => !state);

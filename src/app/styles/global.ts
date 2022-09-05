@@ -23,6 +23,11 @@ export default createGlobalStyle`
   html {
     max-width: 1366px;
     margin: 0 auto;
+    height: 100vh;
+  }
+
+  #__next, body {
+    height: 100%;
   }
 
   body {
