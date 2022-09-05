@@ -1,4 +1,4 @@
-import { RepoPinned } from '@type/PinnedItems';
+import { RepoPinned } from '@type/github/PinnedItems';
 import React from 'react';
 
 import { Container, WrapperTags, Tags } from './styles';
