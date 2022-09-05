@@ -3,11 +3,11 @@ module.exports = {
   defaultLocale: 'en-US',
   defaultNS: 'common',
   pages: {
-    '*': ['common'],
-    '/404': ['common'],
     '/': ['home'],
     '/contact': ['contact'],
-    '/blog/posts/who-is-matheus-todao': ['aboutMe'],
+    '/blog/posts/*': ['aboutMe'],
+    '/404': ['common', '404'],
+    '*': ['common'],
   },
 
   loadLocaleFrom: (locale, namespace) => (
