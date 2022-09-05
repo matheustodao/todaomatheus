@@ -2,38 +2,36 @@ import { useCallback, useEffect, useState } from 'react';
 
 export default function useDimensions() {
   const hasWindow = typeof window !== 'undefined';
-  const [dimensions, setDimensions] = useState({ height: 0, width: 0 });
+  const [dimensions, setDimensions] = useState({ height: null, width: null });
 
-  const doSizeIsBiggerThan = useCallback((value: number) => {
-    const isWidthBigger = hasWindow && window.innerWidth >= value;
-    const isHeightBigger = hasWindow && window.innerHeight >= value;
+  const dimensionsOverlimit = useCallback((maxWidth?: Number, maxHeight?: Number) => {
+    const widthOverlimit = dimensions.width > maxWidth;
+    const heightOverlimit = dimensions.height > maxHeight;
 
-    return { isWidthBigger, isHeightBigger };
+    return { widthOverlimit, heightOverlimit };
+  }, [dimensions]);
+
+  const handleResizeWindowDimensions = useCallback(() => {
+    setTimeout(() => {
+      if (hasWindow) {
+        setDimensions((state) => ({
+          ...state,
+          width: window.innerWidth,
+          height: window.innerHeight,
+        }));
+      }
+    }, 300);
   }, [hasWindow]);
-
-  function handleResizeWindowDimensions() {
-    setDimensions((state) => ({
-      ...state,
-      width: window.innerWidth,
-      height: window.innerHeight,
-    }));
-  }
 
   useEffect(() => {
-    if (hasWindow) {
-      setDimensions((state) => ({
-        ...state,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      }));
-
-      window.addEventListener('resize', handleResizeWindowDimensions);
-    }
+    window.addEventListener('resize', handleResizeWindowDimensions);
+    handleResizeWindowDimensions();
     return () => window.removeEventListener('resize', handleResizeWindowDimensions);
-  }, [hasWindow]);
+  }, [handleResizeWindowDimensions]);
 
   return {
     dimensions,
-    doSizeIsBiggerThan,
+    dimensionsOverlimit: (maxWidth?: Number, maxHeight?: Number) => (
+      dimensionsOverlimit(maxWidth, maxHeight)),
   };
 }

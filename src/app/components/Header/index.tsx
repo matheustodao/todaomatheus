@@ -15,14 +15,18 @@ import { routes } from './utils/routes';
 export default function Header() {
   const { translation } = useTranslate('common');
   const router = useRouter();
-  const { doSizeIsBiggerThan } = useDimensions();
-  const { isWidthBigger } = doSizeIsBiggerThan(999);
-  const [isOpenMenu, setIsOpenMenu] = useState<boolean | null>(isWidthBigger);
-
+  const { dimensionsOverlimit } = useDimensions();
+  const { widthOverlimit } = dimensionsOverlimit(999);
+  const [isOpenMenu, setIsOpenMenu] = useState<boolean>(true);
   useEffect(() => {
-    window.addEventListener('resize', () => setIsOpenMenu(isWidthBigger));
-    return () => window.removeEventListener('resize', () => setIsOpenMenu(isWidthBigger));
-  }, [isWidthBigger]);
+    if (widthOverlimit) {
+      setIsOpenMenu(true);
+    }
+
+    if (!widthOverlimit) {
+      setIsOpenMenu(false);
+    }
+  }, [widthOverlimit]);
 
   function handleToggleModalVisibilityByClick() {
     setIsOpenMenu((state) => !state);
@@ -60,7 +64,7 @@ export default function Header() {
             width={32}
             height={32}
             src="/assets/icons/menu.svg"
-            alt={(isOpenMenu && !isWidthBigger) ? 'Close Menu' : 'Open Menu'}
+            alt={isOpenMenu ? 'Close Menu' : 'Open Menu'}
           />
         </button>
         <AnimatePresence>
