@@ -23,11 +23,10 @@ export default createGlobalStyle`
   html {
     max-width: 1366px;
     margin: 0 auto;
-    height: 100vh;
   }
 
-  #__next, body {
-    height: 100%;
+  html, body {
+    height: 100vh;
   }
 
   body {
@@ -36,6 +35,22 @@ export default createGlobalStyle`
     background: ${({ theme }) => theme.colors.primary.main};
     color: ${({ theme }) => theme.colors.text.main};
     overflow-x: hidden;
+
+    /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.colors.primary.light} ${({ theme }) => theme.colors.mainBackground};
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background: ${({ theme }) => theme.colors.mainBackground};
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.colors.primary.light};
+      border-radius: 20px;
+      border: 3px solid ${({ theme }) => theme.colors.mainBackground};
+    }
   }
 
   button {

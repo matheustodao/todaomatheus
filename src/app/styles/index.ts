@@ -45,12 +45,12 @@ export const Main = styled(motion.main).attrs(() => ({
   },
 }))`
   width: 100%;
+  height: 100vh;
   padding: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`} 1.9rem;
 
   margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
   @media screen and (min-width: 999px) {
     min-height: 53.5rem;
-    max-height: 100%;
     max-width: 1138px;
     align-self: center;
     border-radius: 2.2rem;
