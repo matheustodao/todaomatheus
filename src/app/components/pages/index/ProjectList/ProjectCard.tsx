@@ -18,11 +18,7 @@ export default function ProjectCard({ repos }: IProps) {
             </h5>
 
             {item.descriptionHTML.length > 0 && (
-            <p
-              dangerouslySetInnerHTML={{
-                __html: item.descriptionHTML,
-              }}
-            />
+              <p>{item.descriptionHTML}</p>
             )}
           </div>
 
