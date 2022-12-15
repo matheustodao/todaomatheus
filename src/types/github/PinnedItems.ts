@@ -13,7 +13,7 @@ export interface RepoPinned extends Typename {
   url: string,
   repositoryTopics: Typename & { nodes: Result<{topic: string}>[] },
   languages: Typename & { edges: Result<{node: string}>[] },
-  descriptionHTML: string
+  description: string
 }
 
 export interface PinnedItems extends Typename {
