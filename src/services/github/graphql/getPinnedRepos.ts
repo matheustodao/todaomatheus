@@ -22,7 +22,7 @@ export const getPinnedRepos = gql`
                   }
                 }
               }
-              descriptionHTML
+              description
             }
           }
         }
