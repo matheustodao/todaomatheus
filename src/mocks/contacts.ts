@@ -31,28 +31,4 @@ export const contacts: Contacts[] = [
     link: `https://instagram.com/${usernameDefault}`,
     bg: 'linear-gradient(0deg, #E09B3D 0.29%, #C74C4D 29.97%, #C21975 59.65%, #7024C4 99.22%), #2D333B',
   },
-
-  {
-    id: 3,
-    name: `@${usernameDefault}`,
-    icon: '/assets/icons/twitter.svg',
-    link: `https://twitter.com/${usernameDefault}`,
-    bg: '#16A1CD',
-  },
-
-  {
-    id: 4,
-    name: 'todaomatheus@hotmail.com',
-    icon: '/assets/icons/outlook.svg',
-    link: 'mailto:todaomatheus@hotmail.com',
-    bg: '#2F80ED',
-  },
-
-  {
-    id: 5,
-    name: '+55 (19) 99640-2926',
-    icon: '/assets/icons/whatsapp.svg',
-    link: 'https://wa.me/+5519996402926',
-    bg: 'linear-gradient(90.65deg, #20E56A 9.24%, rgba(60, 246, 129, 0.99) 105.66%)',
-  },
 ];
