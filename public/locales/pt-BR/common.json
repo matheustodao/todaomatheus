@@ -1,0 +1,30 @@
+{
+  "title": "Matheus Todao - Desenvolvedor Frontend React",
+  "description": "Oi! Eu sou Matheus Todao, um desenvolvedor frontend. Eu adoro programar e programação. Eu estudo javascript desde 2019, mas meu interesse em programação foi em 2017. As minhas principais skills: NextJS, Typescript, e um pouco de NodeJS... Olha o meu site para descobrir mais sobre mim.",
+
+  "text_button": {
+    "more-about-me": "Mais Sobre mim",
+    "let-is-talk": "Diga um Oi",
+    "see-all-projects": "Todos Projetos",
+    "go-to-home": "Página inicial"
+  },
+
+  "navigation": {
+    "home": {
+      "name": "Home"
+    },
+
+    "contact": {
+      "name": "Entre em contato"
+    },
+
+    "how_i_built_my_portfolio": {
+      "name": "Como eu montei o meu portfolio"
+    }
+  },
+
+  "languages": {
+    "pt-BR": "Português",
+    "en-US": "Inglês"
+  }
+}
