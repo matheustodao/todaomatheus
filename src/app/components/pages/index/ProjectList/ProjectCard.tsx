@@ -17,7 +17,7 @@ export default function ProjectCard({ repos }: IProps) {
               <a target="__blank" href={item.url}>{item.name}</a>
             </h5>
 
-            {item.description.length > 0 && (
+            {item.description?.length > 0 && (
               <p>{item.description}</p>
             )}
           </div>
