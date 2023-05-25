@@ -14,7 +14,10 @@ export default function ProjectCard({ repos }: IProps) {
         <Container key={item.name}>
           <div className="information">
             <h5>
-              <a target="__blank" href={item.url}>{item.name}</a>
+              {item.name}
+              <a target="__blank" href={item.url}>
+                _
+              </a>
             </h5>
 
             {item.description?.length > 0 && (
