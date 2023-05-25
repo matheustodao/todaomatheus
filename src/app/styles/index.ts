@@ -47,10 +47,11 @@ export const Main = styled(motion.main).attrs(() => ({
   width: 100%;
 
   padding: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`} 1.9rem;
+  margin: auto;
+  min-height: 100vh;
 
   margin-top: ${({ theme }) => `calc(${theme.spacing.heightHeader} + 2rem)`};
   @media screen and (min-width: 999px) {
-    min-height: 53.5rem;
     max-width: 1138px;
     align-self: center;
     border-radius: 2.2rem;

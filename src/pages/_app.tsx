@@ -38,16 +38,14 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <title>{t('common:title')}</title>
       </Head>
       <ThemeProvider theme={theme.dark}>
-        <GlobalStyle />
-        <Header />
-        <div style={wrapperStyleElements}>
-          <AnimatePresence>
-            <Main key={router.route}>
-              <Component {...pageProps} />
-            </Main>
-          </AnimatePresence>
-        </div>
-        <Footer />
+        <AnimatePresence>
+          <GlobalStyle />
+          <Header />
+          <Main key={router.route}>
+            <Component {...pageProps} />
+          </Main>
+          <Footer />
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
